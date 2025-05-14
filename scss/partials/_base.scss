@@ -1,0 +1,56 @@
+/* BASE STYLES */
+/**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $secondaryBackgroundColor;
+    font-family: $font1, $font2;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+@mixin buttonTransition {
+    transition: 0.3s ease;
+
+    &:hover, &:focus {
+        -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95);
+        transition: 0.3s ease;
+    }
+}
+
+@mixin portfolioCards {
+    border: $borderColor 2px solid;
+    border-radius: 20px;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+}
+
+@mixin portfolioImages {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@mixin portfolioPosition {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin borders{
+    border: $borderColor 2px solid;
+    border-radius: 20px;
+}
+
+@mixin flexLayout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

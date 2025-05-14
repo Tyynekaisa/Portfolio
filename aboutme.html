@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaisa Juhola | About Me</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+</head>
+
+<body>
+    <!-- Nav -->
+    <nav class="nav">
+        <input type="checkbox" id="check" class="checkbox" />
+        <div class="hamburger-menu" id="hamburger">
+          <label for="check" class="menu">
+            <div class="menu-line menu-line-1"></div>
+            <div class="menu-line menu-line-2"></div>
+            <div class="menu-line menu-line-3"></div>
+          </label>
+        </div>
+  
+        <div class="navbar-navigation">
+          <div class="navbar-navigation-right">
+            <ul class="nav-list">
+              <li class="nav-list-item"><a href="index.html" class="nav-list-link">HOME</a></li>
+              <li class="nav-list-item"><a href="aboutme.html" class="nav-list-link">ABOUT ME</a></li>
+              <li class="nav-list-item"><a href="CV.html" class="nav-list-link">CV</a></li>
+              <!--<li class="nav-list-item"><a href="contact.html" class="nav-list-link">CONTACT</a></li>-->
+              <li class="nav-list-item"><a href="index.html#interactive" class="nav-list-link">INTERACTIVE APPS</a></li>
+              <li class="nav-list-item"><a href="index.html#www" class="nav-list-link">WWW DESIGN</a></li>
+              <li class="nav-list-item"><a href="index.html#programming" class="nav-list-link">PROGRAMMING</a></li>
+              <li class="nav-list-item"><a href="index.html#jewelry" class="nav-list-link">JEWELRY</a></li>
+              <li class="nav-list-item"><a href="index.html#edit" class="nav-list-link">PHOTO EDITING</a></li>
+              <li class="nav-list-item"><a href="index.html#art" class="nav-list-link">ART</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <!-- End of Nav -->
+
+    <div class="aboutme">
+
+        <!--Header-->
+        <div class="header">
+            <div class="AKicon">
+                <a href="index.html"><img src="images/AK_Logo_Valk@20x_ilmantekstiä.png" alt=""></a>
+            </div>
+            <div class="title"><h1>PORTFOLIO &bull; KAISA JUHOLA</h1></div>
+            <div class="mainmenu">
+                <ul>
+                    <li><a href="index.html">PORTFOLIO</a></li>
+                    <li><a href="aboutme.html">ABOUT ME</a></li>
+                    <li><a href="CV.html">CV</a></li>
+                    <!--<li><a href="contact.html">CONTACT</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <!--end of Header-->
+
+        <!--Main-->
+        <div class="main" id="aboutme">
+            <h5>About Me</h5>
+
+            <div class="aboutme-content">
+                <div class="about-img-contact">
+                <div class="mypicture">
+                    <img src="images/myphoto.jpg" alt="">
+                </div>
+                <div class="contact" id="contact">
+                    <h6>ANNA-<u>KAISA</u> JUHOLA</h6>
+                    <p>Eurajoki, Finland</p>
+                    <p>annakaisa.juhola (at) gmail.com</p>
+    
+                </div>
+                </div>
+                <div class="mystory">
+                    <h6>NICE TO MEET YOU!</h6>
+                    <p>I am a student of Information and Communication Technology, with a strong passion for software engineering and web design. My focus lies in creating both websites and software, encompassing both front-end and back-end development.</p>
+                    <p>Before transitioning to the tech field, I had a successful career as an jeweler entrepreneur. As a goldsmith and hand engraver, I specialized in designing unique jewelry pieces, particularly engagement and wedding rings. This background honed my creative skills and attention to detail, which I now bring into my work in technology.</p>
+                    <p>I am a blend of creativity and logic, constantly seeking ways to merge artistic expression with technical precision. In my free time, I enjoy various crafts and art forms, including painting and ceramics, as well as spending time in nature. I am an avid mushroom forager and deeply connected to the natural world, with a special love for animals—cats, in particular.</p>
+                    <p>I also have a passion for reading and listening to audiobooks, which fuels my curiosity and love for learning, but is also a great way to relax. </p>
+                    <p>I am enthusiastic about continuous learning and applying knowledge in practical and innovative ways. My diverse skill set and enthusiasm for acquiring new knowledge make me a versatile and committed individual in everything I pursue. My motto is: <i>Anything I don't know (yet), I can learn.</i></p>
+                    <p>With love,</p>
+                    <h7>Kaisa</h7>
+                
+                </div>
+                
+            </div>
+        </div>
+        <!--End of Main-->
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="footer-socialmedia">
+            <a href="https://www.linkedin.com/in/anna-kaisa-juhola/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin_logo.png" alt=""></a>
+            <a href="https://www.instagram.com/artbyannakaisa/" target="_blank" rel="noopener noreferrer"><img src="images/instagram_logo.png" alt=""></a>
+            <a href="mailto:annakaisa.juhola@gmail.com" target="_blank" rel="noopener noreferrer"><img src="images/email_logo.png" alt=""></a>
+        </div>
+
+        <div class="footer-copyright">
+            <p class="footer-copyright-paragraph">
+                &copy; Anna-Kaisa Juhola 2024. All rights reserved.
+            </p>
+        </div>
+    </div>
+    <!--End of Footer-->
+
+    <script>
+        const links = document.querySelectorAll(".nav-list-link");
+        links.forEach((item) => item.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+        const checkbox = document.querySelector("#check");
+        checkbox.checked = false;
+        }
+    </script>
+
+    <script>
+        let mybutton = document.getElementById("hamburger");
+
+        function checkScreenWidth() {
+            if (window.innerWidth < 1000) {
+                mybutton.style.display = "block";
+            }
+            else {
+                scrollFunction();
+            }
+        }
+
+        window.onscroll = function() {
+            if (window.innerWidth >= 1000) {
+                scrollFunction();
+            }
+        }
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+                mybutton.style.display = "block";
+            }
+            else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // Run checkScreenWidth on window resize and load to ensure the button visibility is correct
+        window.onresize = checkScreenWidth;
+        window.onload = checkScreenWidth;
+    </script>
+</body>
+</html>
+    

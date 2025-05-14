@@ -1,0 +1,666 @@
+
+/* LAYOUT */
+
+/* HAMBURGER NAVIGATION */
+/**********************************************/
+.navbar {
+    &-navigation {
+        position: relative;
+        z-index: 25;
+        display: flex;
+
+        &-right {
+            width: 100vw;
+            height: 100vh;
+            background-color: $navColor;
+            position: fixed;
+            right: -100vw;
+            @include flexLayout;
+            transition: right 0.7s;
+            
+            @media (min-width: 750px) {
+                width: 50vw;
+                right: -50vw;
+            }
+
+            .nav-list {
+                &-item {
+                    list-style: none;
+                }
+
+                &-link {
+                    font-family: $menuFont;
+                    font-size: 30px;
+                    color: $mainMenuColor;
+                    text-decoration: none;
+                    display: block;
+                    margin: 20px;
+                    text-align: center;
+                    transition: all 0.7s;
+
+                    &:hover {
+                        color: $hoverLink;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media (min-width: 1000px) {
+        display: none;
+    }
+}
+
+/* HEADER */
+/**********************************************/
+
+.header {
+    background-color: $navColor;
+    padding: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    
+    @media (min-width: 400px) {
+        padding: 10px;
+    }
+
+    @media (min-width: 460px) {
+        padding: 13px;
+    }
+
+    @media (min-width: 750px) {
+        display: flex;
+        align-items: center;
+        height: 80px;
+        padding: 10px 20px;
+    }
+
+    @media (min-width: 1366px) {
+        height: 80px;
+        padding: 10px 30px;
+    }
+
+    @media (min-width: 2560px) {
+        height: 120px;
+        padding: 20px 80px;
+    }
+
+
+    .AKicon {
+        width: 100%;
+
+        @media (min-width: 750px) {
+            width: 120px;
+            padding-top: 3px;
+            text-align: start;
+        }
+
+        @media (min-width: 1000px) {
+            width: 9%;
+        }
+
+        @media (min-width: 1366px) {
+            width: 6%;
+        }
+
+    }
+
+    .title {
+        width: 100%;
+
+        @media (min-width: 750px) {
+            text-align: start;
+        }
+
+        @media (min-width: 1000px) {
+            padding-left: 10px;
+            width: 51%;
+
+        }
+
+    }
+
+    .mainmenu {
+        @media (max-width: 999px) {
+            display: none;
+        }
+
+        @media (min-width: 1000px) {
+            width: 43%;
+            text-align: end;
+            justify-self: end;
+    
+            & ul {
+            margin: 0;
+            padding: 0;
+            }
+    
+            & li {
+            display: inline;
+            padding-left: 10px;
+            font-family: $menuFont;
+            font-size: 18px;
+            color: $mainMenuColor;
+            font-weight: lighter;
+    
+                & a {
+                    color: $mainMenuColor;
+                    text-decoration: none;
+    
+                    &:hover, &:focus {
+                        color: $hoverLink;
+                    }
+    
+                    &:active {
+                        color: $visitedLink;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1600px) {
+
+            & ul li {
+                font-size: 20px;
+           }
+
+        }
+
+        @media (min-width: 2560px) {
+        
+            & ul li {
+                 font-size: 30px;
+            }
+        }
+    }
+}
+
+
+/* MAIN */
+/**********************************************/
+
+.frontpage {
+    background: url(../images/background.jpg) center no-repeat;
+    background-size: cover;
+
+    /*@media (min-width: 1366px) {
+        height: 100vh;
+    }
+    */
+}  
+
+.main {
+    border-top: 2px $navColor solid;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    justify-content: center;
+    align-content: center;
+
+    @media (min-width: 1366px) {
+        padding-top: 20px;
+    }
+
+    @media (min-width: 2560px) {
+        padding-top: 30px;
+    }
+
+    &-content {
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @media (min-width: 400px) {
+            margin-top: 30px
+        }
+
+        @media (min-width: 750px) {
+            @include flexLayout;
+        }
+
+        @media (min-width: 1600px) {
+            margin-bottom: 50px;
+        }
+
+        @media (min-width: 1900px) {
+            margin-top: 50px;
+            margin-bottom: 60px;
+        }
+
+    } 
+}
+
+.pictureframe {
+    @media (min-width: 750px) {
+        height: 100%;
+        display: grid;
+        justify-content: end;
+        align-content: center;
+    }
+
+    @media (min-width: 1366px) {
+        padding-right: 40px;
+    }
+
+    @media (min-width: 2560px) {
+        padding-right: 80px;
+    }
+}
+
+.mainbuttons {
+    width: 100%;
+
+    @media (min-width: 750px) {
+        height: 100%;
+         display: grid;
+    }
+
+    @media (min-width: 1366px) {
+        padding-left: 40px;
+    }
+
+    @media (min-width: 2560px) {
+        padding-left: 80px;
+    }
+
+}
+.btn-group {
+    align-items: center;
+    justify-self: center;
+    display: grid;
+    width: 204px;
+
+    @media (min-width: 460px) {
+        width: 418px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3);
+        gap: 10px 10px;
+    }
+
+    @media (min-width: 750px) {
+        width: 338px;
+        height: 332px;
+        gap: 10px 10px;
+    }
+
+    @media (min-width: 1000px) {
+        width: 463px;
+        height: 432px;
+        gap: 15px 15px;
+    }
+
+    @media (min-width: 1366px) {
+        justify-self: start;
+    }
+
+    @media (min-width: 1600px) {
+        width: 560px;
+        height: 520px;
+        gap: 20px 20px;
+    }
+
+    
+    @media (min-width: 2560px) {
+        width: 742px;
+        height: 678px;
+        gap: 30px 30px;
+    }
+
+}
+
+.portfolio {
+    text-align: center;
+    padding: 30px 20px;
+
+    @media (min-width: 750px) {
+        padding: 30px;
+    }
+
+    @media (min-width: 1366px) {
+        padding: 20px 80px;
+    }
+
+    @media (min-width: 2560px) {
+        padding: 40px 200px;
+    }
+
+    &#www, &#jewelry, &#art{
+        background-color: $backgroundColor;
+    }
+
+    h6 {
+        padding-bottom: 20px;
+    }
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+
+    @media (min-width: 2560px) {
+        gap: 30px;
+    }
+}
+
+// Interactive Apps
+
+.responsive-interactive {
+    flex: 1 1 calc(33.33333% - 20px); /* Three columns */
+    box-sizing: border-box;
+
+    @media (max-width: 749px) {
+        flex: 1 1 calc(33.33333% - 10px); 
+    }
+
+    @media (max-width: 459px) {
+        flex: 1 1 100%; /* One column */
+    }
+}
+
+.responsive-www {
+    flex: 1 1 calc(33.3333% - 30px);
+    box-sizing: border-box;
+
+    @media (max-width: 2559px) {
+        flex: 1 1 calc(33.3333% - 10px);
+    }
+
+    @media (max-width: 749px) {
+        flex: 1 1 calc(50% - 10px); /* Two columns */
+    }
+
+    @media (max-width: 459px) {
+        flex: 1 1 100%; /* One column */
+    }
+}
+
+
+
+// Programming
+
+.programming-content {
+    width: 100%;
+}
+
+/* The buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: $buttonColor;
+    color: $mainTitleColor;
+    font-family: $buttonFont;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border: $borderColor 2px solid;
+    border-radius: 20px;
+
+    &:after {
+        content: '+'; /* Unicode character for "plus" sign (+) */
+        font-size: 20px;
+        color: $mainTitleColor;
+        float: right;
+        margin-left: 5px;
+    }
+    }
+
+.active:after {
+    content: '-';
+    font-size: 20px;
+    }
+    
+    /* Background color to the button if it is clicked on, and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: lighten($buttonColor, 5%);
+    }
+    
+    /* The accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 20px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    .language-python {
+        margin: 20px 0;
+        text-align: left;
+    }
+}
+
+.responsive-jewelry {
+    flex: 1 1 calc(20% - 30px);
+    box-sizing: border-box;
+
+    @media (max-width: 2559px) {
+        flex: 1 1 calc(20% - 10px);
+    }
+
+    @media (max-width: 749px) {
+        flex: 1 1 calc(33.33333% - 10px); /* Three columns */
+    }
+
+    @media (max-width: 459px) {
+        flex: 1 1 100%;
+    }
+}
+
+.responsive-art {
+    flex: 1 1 calc(25% - 30px);
+    box-sizing: border-box;
+
+    @media (max-width: 2559px) {
+        flex: 1 1 calc(25% - 10px);
+    }
+
+    @media (max-width: 749px) {
+        flex: 1 1 calc(50% - 10px); /* Two columns */
+    }
+
+    @media (max-width: 459px) {
+        flex: 1 1 100%;
+    }
+
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.aboutme {
+    background: url(../images/background.jpg) center no-repeat;
+    background-size: cover;
+} 
+
+.aboutme-content {
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    @media (min-width: 1000px) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0 30px;
+        gap: 20px;
+    }
+
+    @media (min-width: 1366px) {
+        padding: 20px 80px;
+        gap: 40px;
+    }
+
+    @media (min-width: 1600px) {
+        gap: 60px;
+        padding: 0 180px;
+    }
+
+    @media (min-width: 1920px) {
+        padding: 0 250px;
+
+    }
+
+    @media (min-width: 2560px) {
+        gap: 120px;
+        padding: 20px 400px 80px 400px;
+    }
+
+}
+
+.about-img-contact {
+    @media (min-width: 1000px) {
+        margin-left: 10px;
+        width: 30%;
+    }
+
+    @media (min-width: 1900px) {
+        margin: 0;
+        width: 25%;
+    }
+
+    @media (min-width: 2560px) {
+        margin: 0;
+        width: 20%;
+    }
+
+}
+
+.contact {
+    display: grid;
+    justify-self: center;
+    background-color: $contactColor;
+    width: 60%;
+    @include borders;
+    margin-top: 10px;
+    padding: 15px;
+    
+    @media (min-width: 1000px) {
+        width: calc(100% - 30px);
+    }
+
+}
+
+.mystory {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: rgba(255, 255, 255, 0.5);
+    @include borders;
+    margin-top: 10px;
+    padding: 15px;
+
+    @media (min-width: 460px) {
+        margin: 20px 10px 10px 20px;
+        padding: 20px;
+    }
+
+
+    @media (min-width: 1000px) {
+        margin: 20px;
+        padding: 20px;
+        margin: 0;
+        width: 70%;
+    }
+
+    @media (min-width: 1900px) {
+        margin: 0;
+        width: 75%;
+    }
+
+
+    @media (min-width: 2560px) {
+        margin: 0;
+        padding: 30px;
+        width: 80%;
+    }
+
+}
+
+
+.cv {
+    background: url(../images/background.jpg) center no-repeat;
+    background-size: cover;
+
+    & .main {
+        display: grid;
+        justify-items: center;
+    }
+
+}
+
+.cv-content {
+    display: flex;
+    flex-direction: column;
+	align-items: start;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: start;
+    @include borders;
+    margin-top: 20px;
+    padding: 20px;
+
+    @media (min-width: 1000px) {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+
+    & ul {
+        padding-top: 10px;
+        padding-left: 20px;
+
+        & li {
+            padding-bottom: 10px;
+
+            & ul {
+                padding-top: 3px;
+
+                & li {
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    & h6 {
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    &-column {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1000px) {
+            background-color: rgba(255, 255, 255, 0.5);
+            @include borders;
+            margin: 20px;
+            padding: 20px;
+        }
+    }
+    
+
+}
+
+/* FOOTER */
+/**********************************************/
+
+.footer {
+
+    padding: 30px 10px;
+    text-align: center;
+    background-color: $backgroundColor;
+
+    p {
+        padding-top: 20px;
+        font-family: $font2;
+        text-transform: uppercase;
+    }
+}

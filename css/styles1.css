@@ -1,0 +1,71 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    background-color: #f6e5d9;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    background-color: #d1966a;
+    color: white;
+}
+
+.navbar img {
+    padding-left: 20px;
+}
+
+.navbar span {
+    color: white;
+    font-size: 1.5em;
+    padding-left: 20px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.2em;
+}
+
+.collapse {
+    padding-right: 20px;
+}
+
+.row {
+    background-color: #f6e5d9;
+}
+
+.content {
+    height: 100vh;
+}
+
+.row .btn:hover {
+    background-color: #f4baa0;
+    border-color: #d1a27e;
+}
+
+.row .btn:active {
+    background-color: #b68c78;
+    border-color: #a78266;
+    border-width: 2px;
+    color: white;
+}
+
+.row .my-button {
+    width: 250px;
+    height: 100px;
+    background-color: #f2ac8c;
+    border-color: #d1966a;
+    border-width: 2px;
+    color: white;
+    font-size: x-large;
+    font-style:
+}
+
+.row .my-buttons {
+    gap: 15px;
+}

@@ -1,0 +1,181 @@
+@import "https://fonts.googleapis.com/css?family=Fauna+One|Montserrat|Great+Vibes";
+
+/* COLORS */
+
+$color1: #c5d9dd; // Background1
+$color2: #789aa0; // Hamburger | Portfolio Titles 
+$color3: #99bfc6; // Header | Navbar | Buttons | Contact box
+$color4: #b19258; // Portfolio Borders
+$color5: #b17300; // Titles | Text Links | Hover Links
+$color6: #882526; // Visited link
+$color10: #000; // Paragraph Text
+$color11: #FFF; // Button texts | Titles1 | Background2
+
+$backgroundColor: $color1;
+$secondaryBackgroundColor: $color11;
+$textColor: $color10;
+$buttonColor: $color3;
+$borderColor: $color11;
+$portfolioBorderColor: $color4;
+$buttonTextColor: $color11;
+$navColor: $color3;
+$linkColor: $color5;
+$visitedLink: $color5;
+$hoverLink: $color5;
+$mainMenuColor: $color11;
+$mainTitleColor: $color11;
+$titleColor: $color2;
+$hamburgerColor: $color2;
+$accordion-color: $color2;
+$contactColor: $color3;
+
+/* TYPOGRAPHY */
+
+$font1: 'Fauna One', serif;
+$font2: Montserrat, sans-serif;
+$font3: 'Great Vibes', cursive;
+
+$buttonFont: $font2;
+$headerFont: $font2;
+$plainText: $font1;
+$titleFont: $font2;
+$menuFont: $font2;
+$portfolioTitleFont: $font3;
+$signatureFont: $font3;
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+/*Header font*/
+h1 {
+    font-family: $titleFont;
+    color: $mainTitleColor;
+    font-weight: lighter;
+}
+
+/*Button font*/
+h2 {
+    font-family: $buttonFont;
+    color: $buttonTextColor;
+    font-weight: lighter;
+}
+
+/*Portfolio page title font*/
+h3 {
+    font-family: $portfolioTitleFont;
+    color: $titleColor;
+    font-weight: lighter;
+}
+
+/*Portfolio page gallery title font*/
+h4 {
+    font-family: $titleFont;
+    color: $titleColor;
+    font-weight: lighter;
+}
+
+/* Welcome text */
+h5 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: $mainTitleColor;
+    margin-bottom: -15px;
+}
+
+/* Subtitles */
+h6 {
+    font-family: $titleFont;
+    color: $titleColor;
+    font-weight: lighter;
+}
+
+/* Signature */
+h7 {
+    font-family: $signatureFont;
+    color: $textColor;
+    font-size: 35px;
+
+}
+
+p {
+    font-family: $plainText;
+    color: $textColor;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    & a {
+        color: $linkColor;
+        text-decoration: none;
+
+    &:hover, &:focus {
+        color: $hoverLink;
+    }
+
+    &:visited, &:active {
+        color: $visitedLink;
+    }
+    }
+}
+
+h1 {font-size: 20px;}
+h2 {font-size: 18px;}
+h3 {font-size: 50px;}
+h4 {font-size: 20px;}
+h5 {font-size: 80px;}
+h6 {font-size: 15px;}
+p {font-size: 15px;}
+
+/* SMALL */
+@media (min-width: 400px) {
+    h1 {font-size: 25px;}
+    h3 {font-size: 60px;}
+    h5 {font-size: 90px;}
+    h6 {font-size: 20px;}
+}
+
+/* SMALL+ */
+@media (min-width: 460px) {
+    h1 {font-size: 30px;}
+    h2 {font-size: 18px;}
+    h3 {font-size: 70px;}
+    h5 {font-size: 100px;}
+}
+
+/* MEDIUM */
+@media (min-width: 750px) {
+    h1 {font-size: 32px;}
+    p {font-size: 16px;}
+}
+
+/* LARGE */
+@media (min-width: 1000px) {
+    h2 {font-size: 20px;}    
+}
+
+
+
+/* EXTRALARGE */
+@media (min-width: 1366px) {
+    h1 {font-size: 40px;}
+    h2 {font-size: 25px;}
+    h3 {font-size: 80px; }
+    h5 {font-size: 80px; margin-bottom: -20px;}
+    h6 {font-size: 20px;}
+}
+
+@media (min-width: 1900px) {
+    h5 {font-size: 130px; margin-bottom: -20px;}
+}
+
+/* QUAD HD */
+@media (min-width: 2560px) {
+    h1 {font-size: 55px;}
+    h2 {font-size: 38px;}
+    h3 {font-size: 120px;}
+    h5 {font-size: 180px; margin-bottom: -30px;}
+    h6 {font-size: 30px;}
+    p {font-size: 18px;}
+}

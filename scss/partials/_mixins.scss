@@ -1,0 +1,7 @@
+@mixin bs($bs-type: border-box) {
+    -webkit-box-sizing: $bs-type; /*Chrome*/
+    -moz-box-sizing: $bs-type; /*Mozilla*/
+    -ms-box-sizing: $bs-type; /*Microsoft-selaimet*/
+    -o-box-sizing: $bs-type; /*Opera*/
+    box-sizing: $bs-type;
+}
