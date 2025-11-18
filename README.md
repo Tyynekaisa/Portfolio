@@ -6,8 +6,7 @@
 
 * Web design
 * Software development
-* Photography
+* Photography 
 * Graphic design
-* Photography
 * Jewelry Design
 * Art
