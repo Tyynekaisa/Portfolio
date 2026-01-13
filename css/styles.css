@@ -571,12 +571,12 @@ body {
 }
 
 .responsive-www {
-  flex: 1 1 calc(33.3333% - 30px);
+  flex: 1 1 calc(25% - 30px); /* Four columns */
   box-sizing: border-box;
 }
 @media (max-width: 2559px) {
   .responsive-www {
-    flex: 1 1 calc(33.3333% - 10px);
+    flex: 1 1 calc(25% - 10px);
   }
 }
 @media (max-width: 749px) {
@@ -625,7 +625,7 @@ body {
 
 /* Background color to the button if it is clicked on, and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #a9c9cf;
+  background-color: rgb(169.358490566, 201.2641509434, 207.141509434);
 }
 
 /* The accordion panel. Note: hidden by default */
@@ -1003,12 +1003,12 @@ body {
   text-decoration: none;
 }
 .mainButton:hover, .mainButton:focus {
-  background-color: #a9c9cf;
+  background-color: rgb(169.358490566, 201.2641509434, 207.141509434);
   border-color: white;
 }
 .mainButton:visited, .mainButton:active {
-  background-color: #89b5bd;
-  border-color: #f2f2f2;
+  background-color: rgb(136.641509434, 180.7358490566, 188.858490566);
+  border-color: rgb(242.25, 242.25, 242.25);
 }
 .mainButton:hover, .mainButton:focus {
   -webkit-transform: scale(0.95);

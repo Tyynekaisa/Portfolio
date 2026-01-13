@@ -362,11 +362,11 @@
 }
 
 .responsive-www {
-    flex: 1 1 calc(33.3333% - 30px);
+    flex: 1 1 calc(25% - 30px); /* Four columns */
     box-sizing: border-box;
 
     @media (max-width: 2559px) {
-        flex: 1 1 calc(33.3333% - 10px);
+        flex: 1 1 calc(25% - 10px);
     }
 
     @media (max-width: 749px) {
