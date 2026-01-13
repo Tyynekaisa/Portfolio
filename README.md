@@ -1,2 +1,12 @@
 # Portfolio
-Author: Anna-Kaisa Juhola
+
+🌸 <https://tyynekaisa.github.io/Portfolio/>  
+
+## Portfolio topics: ##
+
+* Web design
+* Software development
+* Photography 
+* Graphic design
+* Jewelry Design
+* Art
