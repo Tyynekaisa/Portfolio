@@ -570,22 +570,22 @@ body {
   }
 }
 
-.responsive-www {
+.responsive-interactive, .responsive-www, .responsive-art {
   flex: 1 1 calc(25% - 30px); /* Four columns */
   box-sizing: border-box;
 }
 @media (max-width: 2559px) {
-  .responsive-www {
+  .responsive-interactive, .responsive-www, .responsive-art {
     flex: 1 1 calc(25% - 10px);
   }
 }
 @media (max-width: 749px) {
-  .responsive-www {
+  .responsive-interactive, .responsive-www, .responsive-art {
     flex: 1 1 calc(50% - 10px); /* Two columns */
   }
 }
 @media (max-width: 459px) {
-  .responsive-www {
+  .responsive-interactive, .responsive-www, .responsive-art {
     flex: 1 1 100%; /* One column */
   }
 }
@@ -657,26 +657,6 @@ body {
 }
 @media (max-width: 459px) {
   .responsive-jewelry {
-    flex: 1 1 100%;
-  }
-}
-
-.responsive-art {
-  flex: 1 1 calc(25% - 30px);
-  box-sizing: border-box;
-}
-@media (max-width: 2559px) {
-  .responsive-art {
-    flex: 1 1 calc(25% - 10px);
-  }
-}
-@media (max-width: 749px) {
-  .responsive-art {
-    flex: 1 1 calc(50% - 10px); /* Two columns */
-  }
-}
-@media (max-width: 459px) {
-  .responsive-art {
     flex: 1 1 100%;
   }
 }
@@ -1095,46 +1075,20 @@ body {
   position: relative;
   background-color: white;
   overflow: hidden;
+  border: #99bfc6 2px solid;
 }
 .card-interactive img {
   display: block;
   width: 100%;
   height: auto;
+  transition: transform 0.5s ease;
 }
-.card-interactive .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  transition: 0.5s ease;
-  opacity: 0;
+.card-interactive img:hover, .card-interactive img:focus {
+  transform: scale(1.05);
 }
-.card-interactive .overlay:hover, .card-interactive .overlay:focus {
-  opacity: 1;
-}
-.card-interactive .overlay H4 {
-  font-size: 20px;
-}
-@media (max-width: 1920px) {
-  .card-interactive .overlay H4 {
-    font-size: 18px;
-  }
-}
-.card-interactive .overlay p {
-  padding: 0;
-  font-size: 18px;
-}
-@media (max-width: 1920px) {
-  .card-interactive .overlay p {
-    padding: 0;
-    font-size: 15px;
-  }
+.card-interactive a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-jewelry {
@@ -1251,30 +1205,34 @@ body {
   font-size: 15px;
 }
 
-.desc-www {
+.desc-www, .desc-interactive {
   height: 70px;
   padding: 10px;
   text-align: center;
   border-top: 1px solid #FFF;
 }
-.desc-www p {
+.desc-www a, .desc-interactive a {
+  text-decoration: none;
+  color: inherit;
+}
+.desc-www p, .desc-interactive p {
   padding: 0;
   font-size: 18px;
 }
 @media (max-width: 1920px) {
-  .desc-www p {
+  .desc-www p, .desc-interactive p {
     padding: 0;
     font-size: 15px;
   }
 }
 @media (max-width: 749px) {
-  .desc-www {
+  .desc-www, .desc-interactive {
     height: 90px;
     padding: 5px;
   }
 }
 @media (max-width: 459px) {
-  .desc-www {
+  .desc-www, .desc-interactive {
     padding: 5px;
     height: 70px;
   }
