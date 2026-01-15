@@ -365,7 +365,9 @@
     }
 }
 
-.responsive-www, .responsive-art {
+// web-design
+
+.responsive-www{
     flex: 1 1 calc(25% - 30px); /* Four columns */
     box-sizing: border-box;
 
@@ -373,7 +375,7 @@
         flex: 1 1 calc(25% - 10px);
     }
 
-    @media (max-width: 749px) {
+    @media (max-width: 999px) {
         flex: 1 1 calc(50% - 10px); /* Two columns */
     }
 
@@ -382,62 +384,7 @@
     }
 }
 
-
-
-// Programming
-
-// .programming-content {
-//     width: 100%;
-// }
-
-// /* The buttons that are used to open and close the accordion panel */
-// .accordion {
-//     background-color: $buttonColor;
-//     color: $mainTitleColor;
-//     font-family: $buttonFont;
-//     font-size: 16px;
-//     cursor: pointer;
-//     padding: 18px;
-//     width: 100%;
-//     text-align: left;
-//     border: none;
-//     outline: none;
-//     transition: 0.4s;
-//     border: $borderColor 2px solid;
-//     border-radius: 20px;
-
-//     &:after {
-//         content: '+'; /* Unicode character for "plus" sign (+) */
-//         font-size: 20px;
-//         color: $mainTitleColor;
-//         float: right;
-//         margin-left: 5px;
-//     }
-//     }
-
-// .active:after {
-//     content: '-';
-//     font-size: 20px;
-//     }
-    
-//     /* Background color to the button if it is clicked on, and when you move the mouse over it (hover) */
-// .active, .accordion:hover {
-//     background-color: lighten($buttonColor, 5%);
-//     }
-    
-//     /* The accordion panel. Note: hidden by default */
-// .panel {
-//     padding: 0 20px;
-//     background-color: white;
-//     max-height: 0;
-//     overflow: hidden;
-//     transition: max-height 0.2s ease-out;
-
-//     .language-python {
-//         margin: 20px 0;
-//         text-align: left;
-//     }
-// }
+//Jewelry gallery
 
 .responsive-jewelry {
     flex: 1 1 calc(20% - 30px);
@@ -453,6 +400,23 @@
 
     @media (max-width: 459px) {
         flex: 1 1 100%;
+    }
+}
+
+.responsive-art {
+    flex: 1 1 calc(25% - 30px); /* Four columns */
+    box-sizing: border-box;
+
+    @media (max-width: 2559px) {
+        flex: 1 1 calc(25% - 10px);
+    }
+
+    @media (max-width: 749px) {
+        flex: 1 1 calc(50% - 10px); /* Two columns */
+    }
+
+    @media (max-width: 459px) {
+        flex: 1 1 100%; /* One column */
     }
 }
 
