@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaisa Juhola | Portfolio | Editing</title>
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-      function initComparisons() {
+function initComparisons() {
         var x, i;
         /*find all elements with an "overlay" class:*/
         x = document.getElementsByClassName("img-comp-overlay");
@@ -84,57 +74,3 @@
           }
         }
       }
-      </script>
-    
-</head>
-
-<body>
-    <div class="container">
-      <!--Header-->
-      <div id="nav-placeholder"></div>
-      <!--end of Header-->
-
-      <!--Main content-->
-      <div class="portfolio" id="edit">
-        <h3>PHOTO EDITING</h3>
-        <p>diibadaabaa... something about my art</p>
-        <p><small>Click the image to see it larger. All images will open in a new tab.</small></p>
-        
-        <div class="gallery">
-          <div class="responsive-edit">
-            <div class="card-edit">
-              <div class="img-comp-container">
-                <div class="img-comp-img">
-                  <img src="images/photoedit/Sofia_halosormus_edited.jpg" width="1000" height="667">
-                </div>
-                <div class="img-comp-img img-comp-overlay">
-                  <img src="images/photoedit/Sofia_halosormus_original.jpg" width="1000" height="667">
-                </div>
-              </div>
-              <div class="desc-edit">
-                <h4>GLORIA</h4>
-                <p>Acrylics on canvas<br>80 cm<br>2020</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-        
-
-    <script>
-      $(function(){
-      $("#nav-placeholder").load("header.html");
-      });
-    </script>
-
-  <script>
-  /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
-  initComparisons();
-  </script>
-
-
-</body>
-</html>

@@ -160,9 +160,6 @@
         line-height: 200px;
     }
 
-    
-
-
 }
 
 // PORTFOLIO CARDS
@@ -291,8 +288,6 @@
             @media (max-width: 1920px) {
                 font-size: 18px;
                 }
-
-
         }
 
         & p {
@@ -303,22 +298,23 @@
                 padding: 0;
                 font-size: 15px;
                 }
-
-
         }
     }
 }
 
 .card-edit {
-    border: 1px solid $portfolioBorderColor;
+    border: 2px solid $borderColor2;
     position: relative;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
+    box-sizing: border-box;
 
     & .img-comp-container {
-        height: 667px;
-        aspect-ratio: 3 / 2;
+        position: relative;
+        height: 333px;
+        width: 500px; /*should be the same width as the images*/
+        
 
         & .img-comp-img {
             position: absolute;
@@ -327,10 +323,32 @@
             overflow: hidden;
     
             & img {
-                @include portfolioImages;
+                // @include portfolioImages;
+                display: block;
+                vertical-align: middle;
             }
         }
+    }
 
+    & .img-comp-container2 {
+        position: relative;
+        
+        width: 500px; /*should be the same width as the images*/
+        height: 573px;
+        
+
+        & .img-comp-img {
+            position: absolute;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+    
+            & img {
+                // @include portfolioImages;
+                display: block;
+                vertical-align: middle;
+            }
+        }
     }
 
     & .img-comp-slider {
@@ -338,16 +356,17 @@
         z-index: 9;
         cursor: ew-resize;
         /*set the appearance of the slider:*/
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         background-color: $navColor;
-        opacity: 0.7;
+        opacity: 0.8;
         border-radius: 50%;
       }
 }
 
 .card-art {
     @include portfolioCards;
+    border: $borderColor2 2px solid;
 
     & img {
         @include portfolioImages;
@@ -376,15 +395,14 @@ text-align: center;
     }
 }
 
-.desc-www, .desc-interactive {
-    height: 70px;
+.desc-www, .desc-interactive, .desc-edit {
+    height: 80px;
     padding: 10px;
     text-align: center;
     border-top: 1px solid $borderColor;
 
     & a {
         text-decoration: none;
-        color: inherit;
     }
 
     & p {

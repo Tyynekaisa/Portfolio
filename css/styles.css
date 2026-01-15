@@ -32,6 +32,8 @@ h4 {
   font-family: Montserrat, sans-serif;
   color: #789aa0;
   font-weight: lighter;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 /* Welcome text */
@@ -536,7 +538,7 @@ body {
     padding: 40px 200px;
   }
 }
-.portfolio#www, .portfolio#jewelry, .portfolio#art {
+.portfolio#www, .portfolio#jewelry, .portfolio#other {
   background-color: #c5d9dd;
 }
 .portfolio h6 {
@@ -547,7 +549,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: center;
 }
 @media (min-width: 2560px) {
   .gallery {
@@ -559,9 +561,14 @@ body {
   flex: 1 1 calc(33.33333% - 20px); /* Three columns */
   box-sizing: border-box;
 }
+@media (max-width: 2559px) {
+  .responsive-interactive {
+    flex: 1 1 calc(33.3333% - 10px);
+  }
+}
 @media (max-width: 749px) {
   .responsive-interactive {
-    flex: 1 1 calc(33.33333% - 10px);
+    flex: 1 1 calc(50% - 10px);
   }
 }
 @media (max-width: 459px) {
@@ -570,75 +577,24 @@ body {
   }
 }
 
-.responsive-interactive, .responsive-www, .responsive-art {
+.responsive-www, .responsive-art {
   flex: 1 1 calc(25% - 30px); /* Four columns */
   box-sizing: border-box;
 }
 @media (max-width: 2559px) {
-  .responsive-interactive, .responsive-www, .responsive-art {
+  .responsive-www, .responsive-art {
     flex: 1 1 calc(25% - 10px);
   }
 }
 @media (max-width: 749px) {
-  .responsive-interactive, .responsive-www, .responsive-art {
+  .responsive-www, .responsive-art {
     flex: 1 1 calc(50% - 10px); /* Two columns */
   }
 }
 @media (max-width: 459px) {
-  .responsive-interactive, .responsive-www, .responsive-art {
+  .responsive-www, .responsive-art {
     flex: 1 1 100%; /* One column */
   }
-}
-
-.programming-content {
-  width: 100%;
-}
-
-/* The buttons that are used to open and close the accordion panel */
-.accordion {
-  background-color: #99bfc6;
-  color: #FFF;
-  font-family: Montserrat, sans-serif;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-  border: #FFF 2px solid;
-  border-radius: 20px;
-}
-.accordion:after {
-  content: "+"; /* Unicode character for "plus" sign (+) */
-  font-size: 20px;
-  color: #FFF;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "-";
-  font-size: 20px;
-}
-
-/* Background color to the button if it is clicked on, and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: rgb(169.358490566, 201.2641509434, 207.141509434);
-}
-
-/* The accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 20px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-.panel .language-python {
-  margin: 20px 0;
-  text-align: left;
 }
 
 .responsive-jewelry {
@@ -846,7 +802,8 @@ body {
 .footer {
   padding: 30px 10px;
   text-align: center;
-  background-color: #c5d9dd;
+  background-color: #99bfc6;
+  border-top: 5px solid #fff;
 }
 .footer p {
   padding-top: 20px;
@@ -1075,7 +1032,7 @@ body {
   position: relative;
   background-color: white;
   overflow: hidden;
-  border: #99bfc6 2px solid;
+  border: #b19258 2px solid;
 }
 .card-interactive img {
   display: block;
@@ -1085,10 +1042,6 @@ body {
 }
 .card-interactive img:hover, .card-interactive img:focus {
   transform: scale(1.05);
-}
-.card-interactive a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .card-jewelry {
@@ -1140,15 +1093,17 @@ body {
 }
 
 .card-edit {
-  border: 1px solid #b19258;
+  border: 2px solid #b19258;
   position: relative;
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 .card-edit .img-comp-container {
-  height: 667px;
-  aspect-ratio: 3/2;
+  position: relative;
+  height: 333px;
+  width: 500px; /*should be the same width as the images*/
 }
 .card-edit .img-comp-container .img-comp-img {
   position: absolute;
@@ -1158,18 +1113,32 @@ body {
 }
 .card-edit .img-comp-container .img-comp-img img {
   display: block;
-  width: 100%;
+  vertical-align: middle;
+}
+.card-edit .img-comp-container2 {
+  position: relative;
+  width: 500px; /*should be the same width as the images*/
+  height: 573px;
+}
+.card-edit .img-comp-container2 .img-comp-img {
+  position: absolute;
+  width: auto;
   height: auto;
+  overflow: hidden;
+}
+.card-edit .img-comp-container2 .img-comp-img img {
+  display: block;
+  vertical-align: middle;
 }
 .card-edit .img-comp-slider {
   position: absolute;
   z-index: 9;
   cursor: ew-resize;
   /*set the appearance of the slider:*/
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-color: #99bfc6;
-  opacity: 0.7;
+  opacity: 0.8;
   border-radius: 50%;
 }
 
@@ -1179,6 +1148,7 @@ body {
   position: relative;
   background-color: white;
   overflow: hidden;
+  border: #b19258 2px solid;
 }
 .card-art img {
   display: block;
@@ -1205,34 +1175,33 @@ body {
   font-size: 15px;
 }
 
-.desc-www, .desc-interactive {
-  height: 70px;
+.desc-www, .desc-interactive, .desc-edit {
+  height: 80px;
   padding: 10px;
   text-align: center;
   border-top: 1px solid #FFF;
 }
-.desc-www a, .desc-interactive a {
+.desc-www a, .desc-interactive a, .desc-edit a {
   text-decoration: none;
-  color: inherit;
 }
-.desc-www p, .desc-interactive p {
+.desc-www p, .desc-interactive p, .desc-edit p {
   padding: 0;
   font-size: 18px;
 }
 @media (max-width: 1920px) {
-  .desc-www p, .desc-interactive p {
+  .desc-www p, .desc-interactive p, .desc-edit p {
     padding: 0;
     font-size: 15px;
   }
 }
 @media (max-width: 749px) {
-  .desc-www, .desc-interactive {
+  .desc-www, .desc-interactive, .desc-edit {
     height: 90px;
     padding: 5px;
   }
 }
 @media (max-width: 459px) {
-  .desc-www, .desc-interactive {
+  .desc-www, .desc-interactive, .desc-edit {
     padding: 5px;
     height: 70px;
   }

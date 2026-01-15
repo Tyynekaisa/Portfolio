@@ -325,7 +325,7 @@
         padding: 40px 200px;
     }
 
-    &#www, &#jewelry, &#art{
+    &#www, &#jewelry, &#other{
         background-color: $backgroundColor;
     }
 
@@ -339,7 +339,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: center;
 
     @media (min-width: 2560px) {
         gap: 30px;
@@ -352,8 +352,12 @@
     flex: 1 1 calc(33.33333% - 20px); /* Three columns */
     box-sizing: border-box;
 
+    @media (max-width: 2559px) {
+        flex: 1 1 calc(33.3333% - 10px);
+    }
+
     @media (max-width: 749px) {
-        flex: 1 1 calc(33.33333% - 10px); 
+        flex: 1 1 calc(50% - 10px); 
     }
 
     @media (max-width: 459px) {
@@ -361,7 +365,7 @@
     }
 }
 
-.responsive-interactive, .responsive-www, .responsive-art {
+.responsive-www, .responsive-art {
     flex: 1 1 calc(25% - 30px); /* Four columns */
     box-sizing: border-box;
 
@@ -382,58 +386,58 @@
 
 // Programming
 
-.programming-content {
-    width: 100%;
-}
+// .programming-content {
+//     width: 100%;
+// }
 
-/* The buttons that are used to open and close the accordion panel */
-.accordion {
-    background-color: $buttonColor;
-    color: $mainTitleColor;
-    font-family: $buttonFont;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    border: $borderColor 2px solid;
-    border-radius: 20px;
+// /* The buttons that are used to open and close the accordion panel */
+// .accordion {
+//     background-color: $buttonColor;
+//     color: $mainTitleColor;
+//     font-family: $buttonFont;
+//     font-size: 16px;
+//     cursor: pointer;
+//     padding: 18px;
+//     width: 100%;
+//     text-align: left;
+//     border: none;
+//     outline: none;
+//     transition: 0.4s;
+//     border: $borderColor 2px solid;
+//     border-radius: 20px;
 
-    &:after {
-        content: '+'; /* Unicode character for "plus" sign (+) */
-        font-size: 20px;
-        color: $mainTitleColor;
-        float: right;
-        margin-left: 5px;
-    }
-    }
+//     &:after {
+//         content: '+'; /* Unicode character for "plus" sign (+) */
+//         font-size: 20px;
+//         color: $mainTitleColor;
+//         float: right;
+//         margin-left: 5px;
+//     }
+//     }
 
-.active:after {
-    content: '-';
-    font-size: 20px;
-    }
+// .active:after {
+//     content: '-';
+//     font-size: 20px;
+//     }
     
-    /* Background color to the button if it is clicked on, and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-    background-color: lighten($buttonColor, 5%);
-    }
+//     /* Background color to the button if it is clicked on, and when you move the mouse over it (hover) */
+// .active, .accordion:hover {
+//     background-color: lighten($buttonColor, 5%);
+//     }
     
-    /* The accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 20px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+//     /* The accordion panel. Note: hidden by default */
+// .panel {
+//     padding: 0 20px;
+//     background-color: white;
+//     max-height: 0;
+//     overflow: hidden;
+//     transition: max-height 0.2s ease-out;
 
-    .language-python {
-        margin: 20px 0;
-        text-align: left;
-    }
-}
+//     .language-python {
+//         margin: 20px 0;
+//         text-align: left;
+//     }
+// }
 
 .responsive-jewelry {
     flex: 1 1 calc(20% - 30px);
@@ -451,24 +455,6 @@
         flex: 1 1 100%;
     }
 }
-
-// .responsive-art {
-//     flex: 1 1 calc(25% - 30px);
-//     box-sizing: border-box;
-
-//     @media (max-width: 2559px) {
-//         flex: 1 1 calc(25% - 10px);
-//     }
-
-//     @media (max-width: 749px) {
-//         flex: 1 1 calc(50% - 10px); /* Two columns */
-//     }
-
-//     @media (max-width: 459px) {
-//         flex: 1 1 100%;
-//     }
-
-// }
 
 .clearfix:after {
     content: "";
@@ -656,7 +642,8 @@
 
     padding: 30px 10px;
     text-align: center;
-    background-color: $backgroundColor;
+    background-color: $navColor;
+    border-top: 5px solid #fff;
 
     p {
         padding-top: 20px;
